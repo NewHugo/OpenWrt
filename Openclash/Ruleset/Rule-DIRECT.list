@@ -1,0 +1,59 @@
+#  内网穿透
+DOMAIN-SUFFIX,tocmcc.cn
+#  万词王
+DOMAIN-SUFFIX,perfectlingo.com
+#  雷速
+DOMAIN-KEYWORD,leisuapi
+#  极光推送
+DOMAIN-KEYWORD,jpush
+#  金十数据
+DOMAIN-SUFFIX,jin10.com
+#  农业银行
+DOMAIN-SUFFIX,abchina.com
+#  爱合租
+DOMAIN-SUFFIX,ihezu.com
+# 蓝光影院
+DOMAIN-SUFFIX,lgyy.vip
+# 牛蛙助手
+DOMAIN-SUFFIX,ios222.com
+#  薄荷
+DOMAIN-SUFFIX,boohee.com
+DOMAIN-SUFFIX,app-measurement.com
+#  拦截100
+DOMAIN-SUFFIX,lanjie100.com
+#  和风天气
+DOMAIN-SUFFIX,qweather.net
+DOMAIN-SUFFIX,qweather.com
+#  训记
+DOMAIN-SUFFIX,xunji.gxzckj.com
+#  挚达
+DOMAIN-SUFFIX,shzhida.com
+#  上汽大众
+DOMAIN-SUFFIX,csvw.com
+DOMAIN-SUFFIX,volkswagen.com
+#  梅赛德斯奔驰
+DOMAIN-SUFFIX,mercedes-benz.com
+#  佳能
+DOMAIN-SUFFIX,canon.hzpharos.com
+#  360吧
+DOMAIN-SUFFIX,360ba.co
+DOMAIN-SUFFIX,360ba.live
+DOMAIN-KEYWORD,360ba
+#  321直播
+DOMAIN-SUFFIX,321tvzb.com
+DOMAIN-SUFFIX,blp1227arw.com
+DOMAIN-SUFFIX,ccipan.net
+DOMAIN-SUFFIX,tlivesource.com
+#  培优
+DOMAIN-SUFFIX,jiemaedu.com
+#  IPV6测试
+DOMAIN-SUFFIX,ipv6.stream
+#  IPTV
+DOMAIN-SUFFIX,dnsany.com
+DOMAIN-SUFFIX,cmvideo.cn
+DOMAIN-SUFFIX,chinamobile.com
+DOMAIN-SUFFIX,mobaibox.com
+DOMAIN-SUFFIX,gitv.tv
+DOMAIN-SUFFIX,cctv.cn
+DOMAIN-SUFFIX,yangshipin.cn
+IP-CIDR,183.206.0.0/15,no-resolve
