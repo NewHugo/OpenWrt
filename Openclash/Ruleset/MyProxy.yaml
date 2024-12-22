@@ -1,8 +1,6 @@
 payload:
   - DOMAIN-SUFFIX,xn--ngstr-lra8j.com
   - DOMAIN-SUFFIX,services.googleapis.cn
-  - DOMAIN-SUFFIX,raw.githubusercontent.com
-  - DOMAIN-SUFFIX,github.com
   - DOMAIN-SUFFIX,vercel.app
   - DOMAIN-SUFFIX,nn.ci
   - DOMAIN-SUFFIX,api.xhofe.top
