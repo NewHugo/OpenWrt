@@ -3,7 +3,7 @@
 # 跑裸核用户请自行去掉下方控制面板模块的注释。
 # 机场订阅
 proxy-providers:
-  Airport1:
+  机场订阅:
     url: "机场订阅填到这里，两端引号不要去掉，不要填写到下方链接里去！！"
     type: http
     interval: 86400
@@ -145,15 +145,18 @@ proxy-groups:
 # 此规则部分没有做防泄露处理，因为弊严重大于利！
 rules:
   - RULE-SET,private_domain,直连
-  - RULE-SET,proxylite,🚀 默认代理
-  - RULE-SET,MyDIRECT,直连
-  - RULE-SET,XPTV,直连
-  - RULE-SET,MyProxy,🚀 默认代理
+  - RULE-SET,proxylite_class,🚀 默认代理
+  - RULE-SET,MyDIRECT_class,直连
+  - RULE-SET,XPTV_class,直连
+  - RULE-SET,MyProxy_class,🚀 默认代理
   - RULE-SET,IPTV,📹 海外IPTV
   - RULE-SET,youtube_domain,📹 YouTube
   - RULE-SET,google_domain,🍀 Google
   - RULE-SET,github_domain,👨🏿‍💻 GitHub
   - RULE-SET,ai,🤖 AI
+  - RULE-SET,bing_domain,🤖 AI
+  - RULE-SET,bing@cn_domain,🤖 AI
+  - RULE-SET,Copilot_class,🤖 AI
   - RULE-SET,netflix_domain,🎥 NETFLIX
   - RULE-SET,disney_domain,🎥 DISNEY+
   - RULE-SET,tiktok_domain,🎵 TikTok
@@ -190,15 +193,18 @@ rule-anchor:
   class: &class {type: http, interval: 86400, behavior: classical, format: text}
 rule-providers: 
   private_domain: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.mrs"}
-  proxylite: { <<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/qichiyuhub/rule/refs/heads/main/proxy.list"}
-  MyDIRECT: { <<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/NewHugo/OpenWrt/refs/heads/main/Openclash/Ruleset/MyDIRECT.list"}
-  XPTV: { <<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/NewHugo/OpenWrt/refs/heads/main/Openclash/Ruleset/XPTV.list"}
-  MyProxy: { <<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/NewHugo/OpenWrt/refs/heads/main/Openclash/Ruleset/MyProxy.list"}
+  proxylite_class: { <<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/qichiyuhub/rule/refs/heads/main/proxy.list"}
+  MyDIRECT_class: { <<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/NewHugo/OpenWrt/refs/heads/main/Openclash/Ruleset/MyDIRECT.list"}
+  XPTV_class: { <<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/NewHugo/OpenWrt/refs/heads/main/Openclash/Ruleset/XPTV.list"}
+  MyProxy_class: { <<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/NewHugo/OpenWrt/refs/heads/main/Openclash/Ruleset/MyProxy.list"}
   IPTV: { <<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/NewHugo/OpenWrt/refs/heads/main/Openclash/Ruleset/IPTV.list"}
   youtube_domain: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.mrs"}
   google_domain: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.mrs"}
   github_domain: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/github.mrs"}
   ai: {  <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ai-!cn.mrs" }
+  bing_domain: {  <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/bing.mrs" }
+  bing@cn_domain: {  <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/bing@cn.mrs" }  
+  Copilot_class: {  <<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Copilot/Copilot.list" }
   netflix_domain: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/netflix.mrs"}
   disney_domain: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/disney.mrs"}
   tiktok_domain: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/tiktok.mrs"}
@@ -208,7 +214,7 @@ rule-providers:
   epicgames@cn_domain: {<<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/epicgames@cn.mrs"}
   epicgames_domain: {<<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/epicgames.mrs"}
   ea_domain: {<<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/ea.mrs"}
-  playstation_domain: {<<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/playstation.mrs"}  
+  playstation_domain: {<<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/playstation.mrs"}
   apple-tvplus_domain: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/apple-tvplus.mrs"}
   apple_domain: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/apple-cn.mrs"}
   onedrive_domain: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/onedrive.mrs"}
@@ -218,9 +224,9 @@ rule-providers:
   Binance_domain: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/binance.mrs"}
   speedtest_domain: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/ookla-speedtest.mrs"}
   telegram_domain: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/telegram.mrs"}
-  whatsapp_domain: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/telegram.mrs"}  
+  whatsapp_domain: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/telegram.mrs"}
   gfw_domain: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/gfw.mrs"}
-  geolocation-!cn: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.mrs"}  
+  geolocation-!cn: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.mrs"}
   cn_domain: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cn.mrs"}
 
   cn_ip: { <<: *ip, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.mrs"}
