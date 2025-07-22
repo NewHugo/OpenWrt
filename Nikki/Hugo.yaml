@@ -149,7 +149,7 @@ rules:
   - RULE-SET,MyDIRECT_class,直连
   - RULE-SET,XPTV_class,直连
   - RULE-SET,MyProxy_class,🚀 默认代理
-  - RULE-SET,IPTV,📹 海外IPTV
+  - RULE-SET,IPTV_class,📹 海外IPTV
   - RULE-SET,youtube_domain,📹 YouTube
   - RULE-SET,google_domain,🍀 Google
   - RULE-SET,github_domain,👨🏿‍💻 GitHub
@@ -197,7 +197,7 @@ rule-providers:
   MyDIRECT_class: { <<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/NewHugo/OpenWrt/refs/heads/main/Openclash/Ruleset/MyDIRECT.list"}
   XPTV_class: { <<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/NewHugo/OpenWrt/refs/heads/main/Openclash/Ruleset/XPTV.list"}
   MyProxy_class: { <<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/NewHugo/OpenWrt/refs/heads/main/Openclash/Ruleset/MyProxy.list"}
-  IPTV: { <<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/NewHugo/OpenWrt/refs/heads/main/Openclash/Ruleset/IPTV.list"}
+  IPTV_class: { <<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/NewHugo/OpenWrt/refs/heads/main/Openclash/Ruleset/IPTV.list"}
   youtube_domain: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.mrs"}
   google_domain: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.mrs"}
   github_domain: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/github.mrs"}
