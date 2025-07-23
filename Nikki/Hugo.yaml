@@ -166,7 +166,6 @@ rules:
   - RULE-SET,Spotify_domain,🎻 Spotify
   - RULE-SET,steam@cn_domain,直连
   - RULE-SET,steam_domain,🎮 Game
-  - RULE-SET,epicgames@cn_domain,直连
   - RULE-SET,epicgames_domain,🎮 Game
   - RULE-SET,ea_domain,🎮 Game
   - RULE-SET,playstation_domain,🎮 Game  
@@ -215,7 +214,6 @@ rule-providers:
   Spotify_domain: {<<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/spotify.mrs"}
   steam@cn_domain: {<<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/steam@cn.mrs"}
   steam_domain: {<<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/steam.mrs"}
-  epicgames@cn_domain: {<<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/epicgames@cn.mrs"}
   epicgames_domain: {<<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/epicgames.mrs"}
   ea_domain: {<<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/ea.mrs"}
   playstation_domain: {<<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/playstation.mrs"}
