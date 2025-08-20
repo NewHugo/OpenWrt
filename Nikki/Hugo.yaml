@@ -148,8 +148,8 @@ proxy-groups:
 rules:
   - RULE-SET,private_domain,直连
   - RULE-SET,proxylite_class,🚀 默认代理
-  - RULE-SET,MyDIRECT_class,直连
-  - RULE-SET,XPTV_class,直连
+  - RULE-SET,MyDIRECT_class,🎯 直连
+  - RULE-SET,XPTV_class,🎯 直连
   - RULE-SET,MyProxy_class,🚀 默认代理
   - RULE-SET,IPTV_class,📹 海外IPTV
   - RULE-SET,EMBY_class,📹 EMBY
@@ -164,7 +164,7 @@ rules:
   - RULE-SET,disney_domain,🎥 DISNEY+
   - RULE-SET,tiktok_domain,🎵 TikTok
   - RULE-SET,Spotify_domain,🎻 Spotify
-  - RULE-SET,steam@cn_domain,直连
+  - RULE-SET,steam@cn_domain,🎯 直连
   - RULE-SET,steam_domain,🎮 Game
   - RULE-SET,epicgames_domain,🎮 Game
   - RULE-SET,ea_domain,🎮 Game
