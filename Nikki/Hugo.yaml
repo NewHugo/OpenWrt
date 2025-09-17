@@ -176,6 +176,7 @@ rules:
   - RULE-SET,apple@cn_domain,🎯 直连
   - RULE-SET,apple-update_domain,🎯 直连
   - RULE-SET,apple-intelligence_domain,🍎 Apple-intelligence
+  - RULE-SET,applefittness_class,🍎 AppleTv+
   - RULE-SET,apple-tvplus_domain,🍎 AppleTv+
   - RULE-SET,apple_domain,🍎 Apple
   - RULE-SET,onedrive_domain,🐬 OneDrive
@@ -229,6 +230,7 @@ rule-providers:
   apple@cn_domain: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/apple@cn.mrs"}
   apple-update_domain: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/apple-update.mrs"}
   apple-intelligence_domain: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/apple-intelligence.mrs"}
+  applefittness_class: { <<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/FitnessPlus/FitnessPlus.list"}
   apple-tvplus_domain: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/apple-tvplus.mrs"}
   apple_domain: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/apple.mrs"}
   onedrive_domain: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/onedrive.mrs"}
