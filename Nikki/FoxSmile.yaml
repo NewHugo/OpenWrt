@@ -151,18 +151,18 @@ rules:
   - RULE-SET,proxylite_class,🚀 默认代理
   - RULE-SET,tvb_domain,📹 海外IPTV
   - RULE-SET,IPTV_class,📹 海外IPTV
-  - RULE-SET,MyDIRECT_class,🎯 直连
-  - RULE-SET,XPTV_class,🎯 直连
   - RULE-SET,MyProxy_class,🚀 默认代理
   - RULE-SET,EMBY_class,📹 EMBY
   - RULE-SET,youtube_domain,📹 YouTube
   - RULE-SET,google_domain,🍀 Google
+  - RULE-SET,google_ip,🍀 Google,no-resolve
   - RULE-SET,github_domain,👨🏿‍💻 GitHub
   - RULE-SET,ai,🤖 AI
   - RULE-SET,bing_domain,🤖 AI
   - RULE-SET,bing@cn_domain,🤖 AI
   - RULE-SET,Copilot_class,🤖 AI
   - RULE-SET,netflix_domain,🎥 NETFLIX
+  - RULE-SET,netflix_ip,🎥 NETFLIX,no-resolve  
   - RULE-SET,disney_domain,🎥 DISNEY+
   - RULE-SET,tiktok_domain,🎵 TikTok
   - RULE-SET,Spotify_domain,🎻 Spotify
@@ -185,13 +185,13 @@ rules:
   - RULE-SET,Binance_domain,🪙 数字货币
   - RULE-SET,speedtest_domain,✈️ Speedtest测速
   - RULE-SET,telegram_domain,📲 Telegram
+  - RULE-SET,telegram_ip,📲 Telegram,no-resolve
   - RULE-SET,whatsapp_domain,📲 whatsapp
+  - RULE-SET,XPTV_class,🎯 直连
+  - RULE-SET,MyDIRECT_class,🎯 直连
   - RULE-SET,gfw_domain,🚀 默认代理
   - RULE-SET,geolocation-!cn,🎯 直连
   - RULE-SET,cn_domain,🎯 直连
-  - RULE-SET,google_ip,🍀 Google,no-resolve
-  - RULE-SET,netflix_ip,🎥 NETFLIX,no-resolve
-  - RULE-SET,telegram_ip,📲 Telegram,no-resolve
   - RULE-SET,cn_ip,🎯 直连
   - MATCH,🐟 漏网之鱼
 
