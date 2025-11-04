@@ -129,8 +129,13 @@ proxy-groups:
 # 此规则部分没有做防泄露处理，因为弊严重大于利！
 rules:
   - RULE-SET,AppleFirmware,直连
-  
-
+  - RULE-SET,AppleHardware,直连
+  - RULE-SET,AppleID,直连
+  - RULE-SET,AppStore,直连
+  - RULE-SET,AppleDaily,直连
+  - RULE-SET,AppleMail,直连
+  - RULE-SET,FindMy,直连
+  - RULE-SET,iCloud,直连
 # 规则集
 rule-anchor:
   ip: &ip {type: http, interval: 86400, behavior: ipcidr, format: mrs}
@@ -138,3 +143,10 @@ rule-anchor:
   class: &class {type: http, interval: 86400, behavior: classical, format: text}
 rule-providers: 
   AppleFirmware: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/AppleFirmware/AppleFirmware_OCD_Domain.mrs"}
+  AppleHardware: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/AppleHardware/AppleHardware_OCD_Domain.mrs"}
+  AppleID: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/AppleID/AppleID_OCD_Domain.mrs"}
+  AppStore: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/AppStore/AppStore_OCD_Domain.mrs"}
+  AppleDaily: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/AppleDaily/AppleDaily_OCD_Domain.mrs"}
+  AppleMail: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/AppleMail/AppleMail_OCD_Domain.mrs"}
+  FindMy: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/FindMy/FindMy_OCD_Domain.mrs"}
+  iCloud: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/iCloud/iCloud_OCD_Domain.mrs"}
