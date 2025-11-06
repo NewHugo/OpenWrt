@@ -104,6 +104,8 @@ proxy-groups:
   - {name: 漏网之鱼, type: select, proxies: [直连, 默认代理]}
   - {name: Apple可代理服务, type: select, proxies: [直连, 香港故转, 台湾故转, 日本故转, 韩国故转, 狮城故转, 美国故转, 香港自动, 台湾自动, 日本自动, 韩国自动, 狮城自动, 美国自动, 自动选择, 香港节点, 台湾节点, 日本节点, 韩国节点, 狮城节点, 美国节点, 全部节点]}
   - {name: 海外流媒体, type: select, proxies: [直连, 香港故转, 台湾故转, 日本故转, 韩国故转, 狮城故转, 美国故转, 香港自动, 台湾自动, 日本自动, 韩国自动, 狮城自动, 美国自动, 自动选择, 香港节点, 台湾节点, 日本节点, 韩国节点, 狮城节点, 美国节点, 全部节点]}
+  - {name: Tiktok, type: select, proxies: [直连, 香港故转, 台湾故转, 日本故转, 韩国故转, 狮城故转, 美国故转, 香港自动, 台湾自动, 日本自动, 韩国自动, 狮城自动, 美国自动, 自动选择, 香港节点, 台湾节点, 日本节点, 韩国节点, 狮城节点, 美国节点, 全部节点]}
+  - {name: AI, type: select, proxies: [直连, 香港故转, 台湾故转, 日本故转, 韩国故转, 狮城故转, 美国故转, 香港自动, 台湾自动, 日本自动, 韩国自动, 狮城自动, 美国自动, 自动选择, 香港节点, 台湾节点, 日本节点, 韩国节点, 狮城节点, 美国节点, 全部节点]}
   - {name: 漏网之鱼, type: select, proxies: [直连, 默认代理]}
   - {name: 香港节点, type: select, include-all: true, filter: "(?i)港|hk|hongkong|hong kong"}
   - {name: 台湾节点, type: select, include-all: true, filter: "(?i)台|tw|taiwan|tai wan"}
@@ -137,10 +139,20 @@ rules:
   - RULE-SET,Apple-Intelligence,Apple可代理服务
   - RULE-SET,AppleNews,Apple可代理服务
   - RULE-SET,YouTube_Domain,海外流媒体
-  - RULE-SET,YouTube_IP,海外流媒体
+  - RULE-SET,YouTube_IP,海外流媒体,no-resolve
   - RULE-SET,Netflix_Domain,海外流媒体
-  - RULE-SET,Netflix_IP,海外流媒体
+  - RULE-SET,Netflix_IP,海外流媒体,no-resolve
   - RULE-SET,Disney_Domain,海外流媒体
+  - RULE-SET,TikTok_Domain,Tiktok
+  - RULE-SET,OpenAI_Domain,AI
+  - RULE-SET,OpenAI_IP,AI,no-resolve
+  - RULE-SET,Bing_Domain,AI
+  - RULE-SET,Copilot_Domain,AI
+  - RULE-SET,Copilot_IP,AI,no-resolve
+  - RULE-SET,ai,AI
+
+  
+
   - RULE-SET,AppleFirmware,直连
   - RULE-SET,AppleHardware,直连
   - RULE-SET,AppleID,直连
@@ -168,7 +180,14 @@ rule-providers:
   Netflix_Domain: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/Netflix/Netflix_OCD_Domain.mrs"}
   Netflix_IP: { <<: *ip, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/Netflix/Netflix_OCD_IP.mrs"}
   Disney_Domain: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/Disney/Disney_OCD_Domain.mrs"}
-
+  TikTok_Domain: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/TikTok/TikTok_OCD_Domain.mrs"}
+  OpenAI_Domain: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/OpenAI/OpenAI_OCD_Domain.mrs"}
+  OpenAI_IP: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/OpenAI/OpenAI_OCD_IP.mrs"}
+  Bing_Domain: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/Bing/Bing_OCD_Domain.mrs"}
+  Copilot_Domain: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/Copilot/Copilot_OCD_Domain.mrs"}
+  Copilot_IP: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/Copilot/Copilot_OCD_IP.mrs"}
+  ai: {  <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ai-!cn.mrs" }
+  
   
   AppleFirmware: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/AppleNews/AppleNews_OCD_Domain.mrs"}
   AppleHardware: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/AppleHardware/AppleHardware_OCD_Domain.mrs"}
