@@ -189,6 +189,7 @@ rules:
   - RULE-SET,XPTV_class,直连
   - RULE-SET,ChinaMax_Domain,直连
   - RULE-SET,ChinaMax_IP,直连
+  - GEOIP,CN,直连,no-resolve
   - MATCH,漏网之鱼
 
 
