@@ -178,6 +178,8 @@ rules:
   - RULE-SET,PlayStation_Domain,海外游戏平台
   - RULE-SET,Facebook_Domain,海外社交平台
   - RULE-SET,Facebook_IP,海外社交平台,no-resolve
+  - RULE-SET,Twitter_Domain,海外社交平台
+  - RULE-SET,Twitter_IP,海外社交平台,no-resolve
   - RULE-SET,Telegram_Domain,海外社交平台
   - RULE-SET,Telegram_IP,海外社交平台,no-resolve
   - RULE-SET,Microsoft_Domain,Microsoft
@@ -241,6 +243,8 @@ rule-providers:
   PlayStation_Domain: {  <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/PlayStation/PlayStation_OCD_Domain.mrs"}
   Facebook_Domain: {  <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/Facebook/Facebook_OCD_Domain.mrs"}
   Facebook_IP: {  <<: *ip, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/Facebook/Facebook_OCD_IP.mrs"}
+  Twitter_Domain: {  <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/Twitter/Twitter_OCD_Domain.mrs"}
+  Twitter_IP: {  <<: *ip, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/Twitter/Twitter_OCD_IP.mrs"}
   Telegram_Domain: {  <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/Telegram/Telegram_OCD_Domain.mrs"}
   Telegram_IP: {  <<: *ip, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/Telegram/Telegram_OCD_IP.mrs"}
   Microsoft_Domain: {  <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/Microsoft/Microsoft_OCD_Domain.mrs"}
