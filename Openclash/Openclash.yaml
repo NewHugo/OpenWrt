@@ -106,6 +106,12 @@ proxy-groups:
   - {name: 海外流媒体, type: select, proxies: [直连, 香港故转, 台湾故转, 日本故转, 韩国故转, 狮城故转, 美国故转, 香港自动, 台湾自动, 日本自动, 韩国自动, 狮城自动, 美国自动, 自动选择, 香港节点, 台湾节点, 日本节点, 韩国节点, 狮城节点, 美国节点, 全部节点]}
   - {name: Tiktok, type: select, proxies: [直连, 香港故转, 台湾故转, 日本故转, 韩国故转, 狮城故转, 美国故转, 香港自动, 台湾自动, 日本自动, 韩国自动, 狮城自动, 美国自动, 自动选择, 香港节点, 台湾节点, 日本节点, 韩国节点, 狮城节点, 美国节点, 全部节点]}
   - {name: AI, type: select, proxies: [直连, 香港故转, 台湾故转, 日本故转, 韩国故转, 狮城故转, 美国故转, 香港自动, 台湾自动, 日本自动, 韩国自动, 狮城自动, 美国自动, 自动选择, 香港节点, 台湾节点, 日本节点, 韩国节点, 狮城节点, 美国节点, 全部节点]}
+  - {name: Spotify, type: select, proxies: [直连, 香港故转, 台湾故转, 日本故转, 韩国故转, 狮城故转, 美国故转, 香港自动, 台湾自动, 日本自动, 韩国自动, 狮城自动, 美国自动, 自动选择, 香港节点, 台湾节点, 日本节点, 韩国节点, 狮城节点, 美国节点, 全部节点]}
+  - {name: 海外游戏平台, type: select, proxies: [直连, 香港故转, 台湾故转, 日本故转, 韩国故转, 狮城故转, 美国故转, 香港自动, 台湾自动, 日本自动, 韩国自动, 狮城自动, 美国自动, 自动选择, 香港节点, 台湾节点, 日本节点, 韩国节点, 狮城节点, 美国节点, 全部节点]}
+  
+  
+  
+  
   - {name: 漏网之鱼, type: select, proxies: [直连, 默认代理]}
   - {name: 香港节点, type: select, include-all: true, filter: "(?i)港|hk|hongkong|hong kong"}
   - {name: 台湾节点, type: select, include-all: true, filter: "(?i)台|tw|taiwan|tai wan"}
@@ -131,6 +137,14 @@ proxy-groups:
 # 规则匹配
 # 此规则部分没有做防泄露处理，因为弊严重大于利！
 rules:
+  - RULE-SET,AppleFirmware,直连
+  - RULE-SET,AppleHardware,直连
+  - RULE-SET,AppleID,直连
+  - RULE-SET,AppStore,直连
+  - RULE-SET,AppleDaily,直连
+  - RULE-SET,AppleMail,直连
+  - RULE-SET,FindMy,直连
+  - RULE-SET,iCloud,直连
   - RULE-SET,iCloudPrivateRelay,Apple可代理服务
   - RULE-SET,AppleProxy,Apple可代理服务
   - RULE-SET,AppleTV,Apple可代理服务
@@ -150,17 +164,14 @@ rules:
   - RULE-SET,Copilot_Domain,AI
   - RULE-SET,Copilot_IP,AI,no-resolve
   - RULE-SET,ai,AI
+  - RULE-SET,Spotify_Domain,Spotify
+  - RULE-SET,Spotify_IP,Spotify,no-resolve
+  - RULE-SET,Steam_Domain,海外游戏平台
+  - RULE-SET,SteamCN_Domain,直连
+  - RULE-SET,Epic_Domain,海外游戏平台
+  - RULE-SET,EA_Domain,海外游戏平台
 
   
-
-  - RULE-SET,AppleFirmware,直连
-  - RULE-SET,AppleHardware,直连
-  - RULE-SET,AppleID,直连
-  - RULE-SET,AppStore,直连
-  - RULE-SET,AppleDaily,直连
-  - RULE-SET,AppleMail,直连
-  - RULE-SET,FindMy,直连
-  - RULE-SET,iCloud,直连
   
 # 规则集
 rule-anchor:
@@ -168,6 +179,14 @@ rule-anchor:
   domain: &domain {type: http, interval: 86400, behavior: domain, format: mrs}
   class: &class {type: http, interval: 86400, behavior: classical, format: text}
 rule-providers: 
+  AppleFirmware: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/AppleNews/AppleNews_OCD_Domain.mrs"}
+  AppleHardware: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/AppleHardware/AppleHardware_OCD_Domain.mrs"}
+  AppleID: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/AppleID/AppleID_OCD_Domain.mrs"}
+  AppStore: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/AppStore/AppStore_OCD_Domain.mrs"}
+  AppleDaily: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/AppleDaily/AppleDaily_OCD_Domain.mrs"}
+  AppleMail: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/AppleMail/AppleMail_OCD_Domain.mrs"}
+  FindMy: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/FindMy/FindMy_OCD_Domain.mrs"}
+  iCloud: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/iCloud/iCloud_OCD_Domain.mrs"}
   iCloudPrivateRelay: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/iCloudPrivateRelay/iCloudPrivateRelay_OCD_Domain.mrs"}
   AppleProxy: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/AppleProxy/AppleProxy_OCD_Domain.mrs"}
   AppleTV: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/AppleTV/AppleTV_OCD_Domain.mrs"}
@@ -175,6 +194,14 @@ rule-providers:
   FitnessPlus: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/FitnessPlus/FitnessPlus_OCD_Domain.mrs"}
   Apple-Intelligence: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/apple-intelligence.mrs"}
   AppleNews: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/AppleNews/AppleNews_OCD_Domain.mrs"}
+  AppleFirmware: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/AppleNews/AppleNews_OCD_Domain.mrs"}
+  AppleHardware: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/AppleHardware/AppleHardware_OCD_Domain.mrs"}
+  AppleID: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/AppleID/AppleID_OCD_Domain.mrs"}
+  AppStore: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/AppStore/AppStore_OCD_Domain.mrs"}
+  AppleDaily: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/AppleDaily/AppleDaily_OCD_Domain.mrs"}
+  AppleMail: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/AppleMail/AppleMail_OCD_Domain.mrs"}
+  FindMy: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/FindMy/FindMy_OCD_Domain.mrs"}
+  iCloud: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/iCloud/iCloud_OCD_Domain.mrs"}
   YouTube_Domain: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/YouTube/YouTube_OCD_Domain.mrs"}
   YouTube_IP: { <<: *ip, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/YouTube/YouTube_OCD_IP.mrs"}
   Netflix_Domain: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/Netflix/Netflix_OCD_Domain.mrs"}
@@ -187,13 +214,16 @@ rule-providers:
   Copilot_Domain: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/Copilot/Copilot_OCD_Domain.mrs"}
   Copilot_IP: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/Copilot/Copilot_OCD_IP.mrs"}
   ai: {  <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ai-!cn.mrs" }
+  Spotify_Domain: {  <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/Spotify/Spotify_OCD_Domain.mrs"}
+  Spotify_IP: {  <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/Spotify/Spotify_OCD_IP.mrs"}
+  Steam_Domain: {  <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/Steam/Steam_OCD_Domain.mrs"}
+  SteamCN_Domain: {  <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/SteamCN/SteamCN_OCD_Domain.mrs"}
+  Epic_Domain: {  <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/Epic/Epic_OCD_Domain.mrs"}
+  EA_Domain: {  <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/EA/EA_OCD_Domain.mrs"}
+
+
+
+
+
   
   
-  AppleFirmware: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/AppleNews/AppleNews_OCD_Domain.mrs"}
-  AppleHardware: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/AppleHardware/AppleHardware_OCD_Domain.mrs"}
-  AppleID: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/AppleID/AppleID_OCD_Domain.mrs"}
-  AppStore: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/AppStore/AppStore_OCD_Domain.mrs"}
-  AppleDaily: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/AppleDaily/AppleDaily_OCD_Domain.mrs"}
-  AppleMail: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/AppleMail/AppleMail_OCD_Domain.mrs"}
-  FindMy: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/FindMy/FindMy_OCD_Domain.mrs"}
-  iCloud: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/iCloud/iCloud_OCD_Domain.mrs"}
