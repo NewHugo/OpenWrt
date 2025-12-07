@@ -109,6 +109,8 @@ proxy-groups:
   - {name: 海外流媒体, type: select, proxies: [直连, 香港故转, 台湾故转, 日本故转, 韩国故转, 狮城故转, 美国故转, 香港自动, 台湾自动, 日本自动, 韩国自动, 狮城自动, 美国自动, 自动选择, 香港节点, 台湾节点, 日本节点, 韩国节点, 狮城节点, 美国节点, 全部节点]}
   - {name: Tiktok, type: select, proxies: [直连, 香港故转, 台湾故转, 日本故转, 韩国故转, 狮城故转, 美国故转, 香港自动, 台湾自动, 日本自动, 韩国自动, 狮城自动, 美国自动, 自动选择, 香港节点, 台湾节点, 日本节点, 韩国节点, 狮城节点, 美国节点, 全部节点]}
   - {name: AI, type: select, proxies: [直连, 香港故转, 台湾故转, 日本故转, 韩国故转, 狮城故转, 美国故转, 香港自动, 台湾自动, 日本自动, 韩国自动, 狮城自动, 美国自动, 自动选择, 香港节点, 台湾节点, 日本节点, 韩国节点, 狮城节点, 美国节点, 全部节点]}
+  - {name: Github, type: select, proxies: [直连, 香港故转, 台湾故转, 日本故转, 韩国故转, 狮城故转, 美国故转, 香港自动, 台湾自动, 日本自动, 韩国自动, 狮城自动, 美国自动, 自动选择, 香港节点, 台湾节点, 日本节点, 韩国节点, 狮城节点, 美国节点, 全部节点]}
+  - {name: Pikpak, type: select, proxies: [直连, 香港故转, 台湾故转, 日本故转, 韩国故转, 狮城故转, 美国故转, 香港自动, 台湾自动, 日本自动, 韩国自动, 狮城自动, 美国自动, 自动选择, 香港节点, 台湾节点, 日本节点, 韩国节点, 狮城节点, 美国节点, 全部节点]}
   - {name: Spotify, type: select, proxies: [直连, 香港故转, 台湾故转, 日本故转, 韩国故转, 狮城故转, 美国故转, 香港自动, 台湾自动, 日本自动, 韩国自动, 狮城自动, 美国自动, 自动选择, 香港节点, 台湾节点, 日本节点, 韩国节点, 狮城节点, 美国节点, 全部节点]}
   - {name: 海外游戏平台, type: select, proxies: [直连, 香港故转, 台湾故转, 日本故转, 韩国故转, 狮城故转, 美国故转, 香港自动, 台湾自动, 日本自动, 韩国自动, 狮城自动, 美国自动, 自动选择, 香港节点, 台湾节点, 日本节点, 韩国节点, 狮城节点, 美国节点, 全部节点]}
   - {name: 海外社交平台, type: select, proxies: [直连, 香港故转, 台湾故转, 日本故转, 韩国故转, 狮城故转, 美国故转, 香港自动, 台湾自动, 日本自动, 韩国自动, 狮城自动, 美国自动, 自动选择, 香港节点, 台湾节点, 日本节点, 韩国节点, 狮城节点, 美国节点, 全部节点]}
@@ -169,6 +171,8 @@ rules:
   - RULE-SET,Copilot_Domain,AI
   - RULE-SET,Copilot_IP,AI,no-resolve
   - RULE-SET,ai,AI
+  - RULE-SET,Github_Domain,Github
+  - RULE-SET,Pikpak_Domain,Pikpak
   - RULE-SET,Spotify_Domain,Spotify
   - RULE-SET,Spotify_IP,Spotify,no-resolve
   - RULE-SET,Steam_Domain,海外游戏平台
@@ -234,6 +238,8 @@ rule-providers:
   Copilot_Domain: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/Copilot/Copilot_OCD_Domain.mrs"}
   Copilot_IP: { <<: *ip, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/Copilot/Copilot_OCD_IP.mrs"}
   ai: {  <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ai-!cn.mrs" }
+  Github_Domain: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/github.mrs"}
+  Pikpak_Domain: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/pikpak.mrs"}
   Spotify_Domain: {  <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/Spotify/Spotify_OCD_Domain.mrs"}
   Spotify_IP: {  <<: *ip, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/Spotify/Spotify_OCD_IP.mrs"}
   Steam_Domain: {  <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/peiyingyao/Rule-for-OCD/master/rule/Clash/Steam/Steam_OCD_Domain.mrs"}
