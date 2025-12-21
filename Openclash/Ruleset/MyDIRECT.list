@@ -63,4 +63,12 @@ DOMAIN-SUFFIX,mobaibox.com
 DOMAIN-SUFFIX,gitv.tv
 DOMAIN-SUFFIX,cctv.cn
 DOMAIN-SUFFIX,yangshipin.cn
+DOMAIN-SUFFIX,kbstar.com
+DOMAIN-SUFFIX,shinhan.com
+DOMAIN-SUFFIX,wooribank.com
+DOMAIN-SUFFIX,hanafn.com
+DOMAIN-SUFFIX,nhbank.com
+DOMAIN-SUFFIX,kakaobank.com
+DOMAIN-SUFFIX,toss.im
+DOMAIN-SUFFIX,kbanknow.com
 IP-CIDR,183.206.0.0/15,no-resolve
