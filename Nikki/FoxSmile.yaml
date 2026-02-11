@@ -162,20 +162,20 @@ proxy-groups:
 rules:
   - RULE-SET,private_domain,直连
   - RULE-SET,proxylite_class,🚀 默认代理
-  - RULE-SET,tvb_domain,📹 海外IPTV
-  - RULE-SET,IPTV_class,📹 海外IPTV
   - RULE-SET,MyProxy_class,🚀 默认代理
-  - RULE-SET,EMBY_class,📹 EMBY
-  - RULE-SET,youtube_domain,📹 YouTube
-  - RULE-SET,google_domain,🍀 Google
-  - RULE-SET,google_ip,🍀 Google,no-resolve
-  - RULE-SET,github_domain,👨🏿‍💻 GitHub
   - RULE-SET,openai,🤖 openai
   - RULE-SET,gemini,🤖 gemini
   - RULE-SET,ai,🤖 AI
   - RULE-SET,bing_domain,🤖 AI
   - RULE-SET,bing@cn_domain,🤖 AI
   - RULE-SET,Copilot_class,🤖 AI
+  - RULE-SET,google_domain,🍀 Google
+  - RULE-SET,google_ip,🍀 Google,no-resolve
+  - RULE-SET,github_domain,👨🏿‍💻 GitHub
+  - RULE-SET,tvb_domain,📹 海外IPTV
+  - RULE-SET,IPTV_class,📹 海外IPTV
+  - RULE-SET,EMBY_class,📹 EMBY
+  - RULE-SET,youtube_domain,📹 YouTube
   - RULE-SET,netflix_domain,🎥 NETFLIX
   - RULE-SET,netflix_ip,🎥 NETFLIX,no-resolve  
   - RULE-SET,disney_domain,🎥 DISNEY+
