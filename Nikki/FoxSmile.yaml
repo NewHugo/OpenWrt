@@ -219,21 +219,21 @@ rule-anchor:
 rule-providers: 
   private_domain: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.mrs"}
   proxylite_class: { <<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/qichiyuhub/rule/refs/heads/main/proxy.list"}
-  tvb_domain: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/tvb.mrs"}
-  IPTV_class: { <<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/NewHugo/OpenWrt/refs/heads/main/Openclash/Ruleset/IPTV.list"}
-  MyDIRECT_class: { <<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/NewHugo/OpenWrt/refs/heads/main/Openclash/Ruleset/MyDIRECT.list"}
-  XPTV_class: { <<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/NewHugo/OpenWrt/refs/heads/main/Openclash/Ruleset/XPTV.list"}
   MyProxy_class: { <<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/NewHugo/OpenWrt/refs/heads/main/Openclash/Ruleset/MyProxy.list"}
-  EMBY_class: { <<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/NewHugo/OpenWrt/refs/heads/main/Openclash/Ruleset/EMBY.list"}  
-  youtube_domain: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.mrs"}
-  google_domain: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.mrs"}
-  github_domain: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/github.mrs"}
   openai: {  <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/openai.mrs" }
   gemini: {  <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google-gemini.mrs" }
   ai: {  <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ai-!cn.mrs" }
   bing_domain: {  <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/bing.mrs" }
   bing@cn_domain: {  <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/bing@cn.mrs" }  
   Copilot_class: {  <<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Copilot/Copilot.list" }
+  google_domain: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.mrs"}
+  github_domain: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/github.mrs"}
+  MyDIRECT_class: { <<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/NewHugo/OpenWrt/refs/heads/main/Openclash/Ruleset/MyDIRECT.list"}
+  tvb_domain: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/tvb.mrs"}
+  IPTV_class: { <<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/NewHugo/OpenWrt/refs/heads/main/Openclash/Ruleset/IPTV.list"}
+  XPTV_class: { <<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/NewHugo/OpenWrt/refs/heads/main/Openclash/Ruleset/XPTV.list"}
+  EMBY_class: { <<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/NewHugo/OpenWrt/refs/heads/main/Openclash/Ruleset/EMBY.list"}  
+  youtube_domain: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.mrs"}
   netflix_domain: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/netflix.mrs"}
   disney_domain: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/disney.mrs"}
   tiktok_domain: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/tiktok.mrs"}
