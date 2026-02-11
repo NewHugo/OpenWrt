@@ -156,7 +156,7 @@ proxy-groups:
   - {name: ♻️ 英国自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(英|UK|(?i)Britain))^((?!(港|台|日|韩|新|泰|越|美|俄|官网|剩余|异常|套餐)).)*$"}
   - {name: ♻️ 俄罗斯自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(俄|RU|(?i)Russia))^((?!(港|台|日|韩|新|泰|越|美|英|官网|剩余|异常|套餐)).)*$"}
   - {name: ♻️ 自动选择, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "^((?!(直连|官网|剩余|异常|套餐)).)*$"}
-  - {name: 🌐 全部节点, type: select, include-all: true, filter: "^((?!(直连|官网|剩余|异常|套餐)).)*$"}
+  - {name: 🌐 全部节点, type: select, include-all: true, filter: "^((?!(直连|官网|剩余|异常|套餐|地址)).)*$"}
 
 # 规则匹配
 # 此规则部分没有做防泄露处理，因为弊严重大于利！
