@@ -48,4 +48,5 @@ payload:
   - DOMAIN-SUFFIX,kakaobank.com
   - DOMAIN-SUFFIX,toss.im
   - DOMAIN-SUFFIX,kbanknow.com
+  - DOMAIN-SUFFIX,cloudedge360.com
   - IP-CIDR,183.206.0.0/15,no-resolve
