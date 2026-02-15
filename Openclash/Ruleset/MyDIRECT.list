@@ -71,4 +71,4 @@ DOMAIN-SUFFIX,nhbank.com
 DOMAIN-SUFFIX,kakaobank.com
 DOMAIN-SUFFIX,toss.im
 DOMAIN-SUFFIX,kbanknow.com
-IP-CIDR,183.206.0.0/15,no-resolve
+DOMAIN-SUFFIX,cloudedge360.com
