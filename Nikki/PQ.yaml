@@ -164,6 +164,7 @@ rules:
   - RULE-SET,google_ip,🍀 Google,no-resolve
   - RULE-SET,github_domain,👨🏿‍💻 GitHub
   - RULE-SET,tvb_domain,📹 海外IPTV
+  - RULE-SET,mytvsuper_domain,📹 海外IPTV
   - RULE-SET,IPTV_class,📹 海外IPTV
   - RULE-SET,EMBY_class,📹 EMBY
   - RULE-SET,youtube_domain,📹 YouTube
@@ -222,6 +223,7 @@ rule-providers:
   github_domain: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/github.mrs"}
   MyDIRECT_class: { <<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/NewHugo/OpenWrt/refs/heads/main/Openclash/Ruleset/MyDIRECT.list"}
   tvb_domain: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/tvb.mrs"}
+  mytvsuper_domain: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/mytvsuper.mrs"}
   IPTV_class: { <<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/NewHugo/OpenWrt/refs/heads/main/Openclash/Ruleset/IPTV.list"}
   XPTV_class: { <<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/NewHugo/OpenWrt/refs/heads/main/Openclash/Ruleset/XPTV.list"}
   EMBY_class: { <<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/NewHugo/OpenWrt/refs/heads/main/Openclash/Ruleset/EMBY.list"}  
