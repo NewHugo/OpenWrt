@@ -60,6 +60,9 @@ sniffer:
     - "+.v2ex.com"
   skip-domain:
     - "+.baidu.com"
+    - "Mijia Cloud"
+    - "+.homekit.apple.com"
+    - "+.icloud.com"
 
 # 入站  
 tun:
