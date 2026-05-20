@@ -86,6 +86,12 @@ dns:
     - "+.msftncsi.com"
     - "time.*.com"
     - "+.market.xiaomi.com"
+    - "*.local"
+    - "*.lan"
+    - "router.asus.com"
+    - "home.arpa"
+    - "+.homekit.apple.com"
+    - "+.icloud.com"
   default-nameserver:
     - 223.5.5.5
   proxy-server-nameserver:
