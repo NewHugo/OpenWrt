@@ -9,7 +9,7 @@ proxy-providers:
     health-check:
       enable: true
       url: https://www.gstatic.com/generate_204
-      interval: 300
+      interval: 1800
     proxy: 直连
 
 # 节点信息
@@ -28,7 +28,7 @@ ipv6: false
 unified-delay: true
 tcp-concurrent: true
 log-level: warning
-find-process-mode: 'off'
+find-process-mode: 'strict'
 # interface-name: en0
 keep-alive-idle: 600
 keep-alive-interval: 15
