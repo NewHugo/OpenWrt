@@ -93,9 +93,8 @@ dns:
     - "*.lan"
     - "router.asus.com"
     - "home.arpa"
+    - "+.icloud.com"
     - "+.homekit.apple.com"
-    - "*.apple.com"
-    - "*.icloud.com"
     - "*.push.apple.com"
     - "*.apple-dns.net"
     - "*.mzstatic.com"
@@ -110,7 +109,7 @@ dns:
   nameserver:
     - 116.228.111.118
     - 180.168.255.18
- 
+    - tls://1.1.1.1 
 # 出站策略，根据自己情况调整每个策略里分组排序，增删都可以，比如把美国自动放到第一个，比如删除香港故转，注意别漏掉表情逗号等。
 # 如果相应分组没有筛选到对应的国家，请根据自己节点名字调整筛选关键字。
 # 没有再使用锚点，是考虑很多新手修改难度，这样新手修改某个分组更容易些。
@@ -162,6 +161,7 @@ proxy-groups:
 # 此规则部分没有做防泄露处理，因为弊严重大于利！
 rules:
   - RULE-SET,private_domain,🎯 直连
+  - RULE-SET,private_ip,🎯 直连,no-resolve
   - RULE-SET,MyDIRECT_class,🎯 直连
   - RULE-SET,proxylite_class,🚀 默认代理
   - RULE-SET,MyProxy_class,🚀 默认代理
@@ -194,6 +194,7 @@ rules:
   - RULE-SET,AppleProxy_class,🍎 Apple代理
   - RULE-SET,iCloudPrivateRelay_class,🍎 Apple代理
   - RULE-SET,apple-intelligence_domain,🍎 Apple代理
+  - RULE-SET,AppStore_class,🍎 Apple代理
   - RULE-SET,AppleMedia_class,🍎 Apple代理
   - RULE-SET,AppleTV_class,🍎 Apple代理
   - RULE-SET,AppleMusic_class,🍎 Apple代理
@@ -201,7 +202,6 @@ rules:
   - RULE-SET,AppleNews_class,🍎 Apple代理
   - RULE-SET,TestFlight_class,🍎 Apple代理
   - RULE-SET,iCloud_class,🎯 直连
-  - RULE-SET,AppStore_class,🎯 直连
   - RULE-SET,AppleID_class,🎯 直连
   - RULE-SET,AppleMail_class,🎯 直连
   - RULE-SET,AppleFirmware_class,🎯 直连
@@ -237,6 +237,7 @@ rule-anchor:
   class_yaml: &class_yaml {type: http, interval: 86400, behavior: classical, format: yaml}
 rule-providers: 
   private_domain: { <<: *domain_mrs, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.mrs"}
+  private_ip: { <<: *ip_mrs, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/private.mrs"}
   MyDIRECT_class: { <<: *class_text, url: "https://gh-proxy.com/raw.githubusercontent.com/NewHugo/OpenWrt/refs/heads/main/Openclash/Ruleset/MyDIRECT.list"}
   proxylite_class: { <<: *class_text, url: "https://gh-proxy.com/raw.githubusercontent.com/qichiyuhub/rule/refs/heads/main/proxy.list"}
   Bet_class: { <<: *class_yaml, url: "https://gh-proxy.com/raw.githubusercontent.com/NewHugo/OpenWrt/refs/heads/main/Openclash/Ruleset/Bet.yaml"}
@@ -268,6 +269,7 @@ rule-providers:
   AppleProxy_class: { <<: *class_yaml, url: "https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/AppleProxy/AppleProxy_No_Resolve.yaml"}
   iCloudPrivateRelay_class: { <<: *class_yaml, url: "https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/iCloudPrivateRelay/iCloudPrivateRelay_No_Resolve.yaml"}
   apple-intelligence_domain: { <<: *domain_mrs, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/apple-intelligence.mrs"}
+  AppStore_class: { <<: *class_yaml, url: "https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/AppStore/AppStore_No_Resolve.yaml"}
   AppleMedia_class: { <<: *class_yaml, url: "https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/AppleMedia/AppleMedia_No_Resolve.yaml"}
   AppleTV_class: { <<: *class_yaml, url: "https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/AppleTV/AppleTV_No_Resolve.yaml"}
   AppleMusic_class: { <<: *class_yaml, url: "https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/AppleMusic/AppleMusic_No_Resolve.yaml"}
@@ -275,7 +277,6 @@ rule-providers:
   AppleNews_class: { <<: *class_yaml, url: "https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/AppleNews/AppleNews_No_Resolve.yaml"}
   TestFlight_class: { <<: *class_yaml, url: "https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/TestFlight/TestFlight_No_Resolve.yaml"}
   iCloud_class: { <<: *class_yaml, url: "https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/iCloud/iCloud_No_Resolve.yaml"}
-  AppStore_class: { <<: *class_yaml, url: "https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/AppStore/AppStore_No_Resolve.yaml"}
   AppleID_class: { <<: *class_yaml, url: "https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/AppleID/AppleID_No_Resolve.yaml"}
   AppleMail_class: { <<: *class_yaml, url: "https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/AppleMail/AppleMail_No_Resolve.yaml"}
   AppleFirmware_class: { <<: *class_yaml, url: "https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/AppleFirmware/AppleFirmware_No_Resolve.yaml"}
