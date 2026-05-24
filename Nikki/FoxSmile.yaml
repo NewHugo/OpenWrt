@@ -144,17 +144,17 @@ proxy-groups:
   - {name: 🇯🇵 日本节点, type: select, include-all: true, filter: "(?i)日本|jp|japan"}
   - {name: 🇸🇬 狮城节点, type: select, include-all: true, filter: "(?i)新加坡|坡|狮城|SG|Singapore"}
   - {name: 🇺🇲 美国节点, type: select, include-all: true, filter: "(?i)美|us|unitedstates|united states"}
-  - {name: 🔯 香港故转, type: fallback, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|泰|越|美|英|俄|官网|剩余|异常|套餐)).)*$"}
-  - {name: 🔯 台湾故转, type: fallback, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(台|TW|(?i)Tai))^((?!(港|日|韩|新|泰|越|美|英|俄|官网|剩余|异常|套餐)).)*$"}
-  - {name: 🔯 日本故转, type: fallback, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(日本|JP|(?i)Japan))^((?!(港|台|韩|新|泰|越|美|英|俄|官网|剩余|异常|套餐)).)*$"}
-  - {name: 🔯 狮城故转, type: fallback, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(新加坡|坡|狮城|SG|Singapore))^((?!(港|台|日|韩|泰|越|美|英|俄|官网|剩余|异常|套餐)).)*$"}
-  - {name: 🔯 美国故转, type: fallback, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(美|US|(?i)States|America))^((?!(港|台|日|韩|新|泰|越|英|俄|官网|剩余|异常|套餐)).)*$"}
-  - {name: ♻️ 香港自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|泰|越|美|英|俄|官网|剩余|异常|套餐)).)*$"}
-  - {name: ♻️ 台湾自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(台|TW|(?i)Tai))^((?!(港|日|韩|新|泰|越|美|英|俄|官网|剩余|异常|套餐)).)*$"}
-  - {name: ♻️ 日本自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(日本|JP|(?i)Japan))^((?!(港|台|韩|新|泰|越|美|英|俄|官网|剩余|异常|套餐)).)*$"}
-  - {name: ♻️ 狮城自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(新加坡|坡|狮城|SG|Singapore))^((?!(港|台|日|韩|泰|越|美|英|俄|官网|剩余|异常|套餐)).)*$"}
-  - {name: ♻️ 美国自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(美|US|(?i)States|America))^((?!(港|台|日|韩|新|泰|越|英|俄|官网|剩余|异常|套餐)).)*$"}
-  - {name: ♻️ 自动选择, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "^((?!(直连|官网|剩余|异常|套餐)).)*$"}
+  - {name: 🔯 香港故转, type: fallback, include-all: true, tolerance: 50, interval: 600, lazy: true, filter: "(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|泰|越|美|英|俄|官网|剩余|异常|套餐)).)*$"}
+  - {name: 🔯 台湾故转, type: fallback, include-all: true, tolerance: 50, interval: 600, lazy: true, filter: "(?=.*(台|TW|(?i)Tai))^((?!(港|日|韩|新|泰|越|美|英|俄|官网|剩余|异常|套餐)).)*$"}
+  - {name: 🔯 日本故转, type: fallback, include-all: true, tolerance: 50, interval: 600, lazy: true, filter: "(?=.*(日本|JP|(?i)Japan))^((?!(港|台|韩|新|泰|越|美|英|俄|官网|剩余|异常|套餐)).)*$"}
+  - {name: 🔯 狮城故转, type: fallback, include-all: true, tolerance: 50, interval: 600, lazy: true, filter: "(?=.*(新加坡|坡|狮城|SG|Singapore))^((?!(港|台|日|韩|泰|越|美|英|俄|官网|剩余|异常|套餐)).)*$"}
+  - {name: 🔯 美国故转, type: fallback, include-all: true, tolerance: 50, interval: 600, lazy: true, filter: "(?=.*(美|US|(?i)States|America))^((?!(港|台|日|韩|新|泰|越|英|俄|官网|剩余|异常|套餐)).)*$"}
+  - {name: ♻️ 香港自动, type: url-test, include-all: true, tolerance: 100, interval: 900, lazy: true, filter: "(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|泰|越|美|英|俄|官网|剩余|异常|套餐)).)*$"}
+  - {name: ♻️ 台湾自动, type: url-test, include-all: true, tolerance: 100, interval: 900, lazy: true, filter: "(?=.*(台|TW|(?i)Tai))^((?!(港|日|韩|新|泰|越|美|英|俄|官网|剩余|异常|套餐)).)*$"}
+  - {name: ♻️ 日本自动, type: url-test, include-all: true, tolerance: 100, interval: 900, lazy: true, filter: "(?=.*(日本|JP|(?i)Japan))^((?!(港|台|韩|新|泰|越|美|英|俄|官网|剩余|异常|套餐)).)*$"}
+  - {name: ♻️ 狮城自动, type: url-test, include-all: true, tolerance: 100, interval: 900, lazy: true, filter: "(?=.*(新加坡|坡|狮城|SG|Singapore))^((?!(港|台|日|韩|泰|越|美|英|俄|官网|剩余|异常|套餐)).)*$"}
+  - {name: ♻️ 美国自动, type: url-test, include-all: true, tolerance: 100, interval: 900, lazy: true, filter: "(?=.*(美|US|(?i)States|America))^((?!(港|台|日|韩|新|泰|越|英|俄|官网|剩余|异常|套餐)).)*$"}
+  - {name: ♻️ 自动选择, type: url-test, include-all: true, tolerance: 100, interval: 900, lazy: true, filter: "^((?!(直连|官网|剩余|异常|套餐)).)*$"}
   - {name: 🌐 全部节点, type: select, include-all: true, filter: "^((?!(直连|官网|剩余|异常|套餐|地址)).)*$"}
 
 # 规则匹配
