@@ -193,7 +193,7 @@ rules:
   - RULE-SET,AppleDev_class,🍎 Apple代理
   - RULE-SET,AppleProxy_class,🍎 Apple代理
   - RULE-SET,iCloudPrivateRelay_class,🍎 Apple代理
-  - RULE-SET,apple-intelligence,🍎 Apple代理
+  - RULE-SET,apple-intelligence_domain,🍎 Apple代理
   - RULE-SET,AppleMedia_class,🍎 Apple代理
   - RULE-SET,AppleTV_class,🍎 Apple代理
   - RULE-SET,AppleMusic_class,🍎 Apple代理
