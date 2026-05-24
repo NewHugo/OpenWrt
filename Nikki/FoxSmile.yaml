@@ -68,7 +68,7 @@ sniffer:
 tun:
   enable: true
   # system/gvisor/mixed
-  stack: mixed
+  stack: system
   dns-hijack: ["any:53", "tcp://any:53"]
   auto-route: true
   auto-redirect: true
@@ -94,7 +94,13 @@ dns:
     - "router.asus.com"
     - "home.arpa"
     - "+.homekit.apple.com"
-    - "+.icloud.com"
+    - "*.apple.com"
+    - "*.icloud.com"
+    - "*.push.apple.com"
+    - "*.apple-dns.net"
+    - "*.mzstatic.com"
+    - "*.itunes.apple.com"
+    - "*.apps.apple.com"
   default-nameserver:
     - 223.5.5.5
   proxy-server-nameserver:
