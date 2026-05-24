@@ -37,6 +37,7 @@ payload:
   - DOMAIN-SUFFIX,mos077.com
   - DOMAIN-SUFFIX,mos100.com
   - DOMAIN-SUFFIX,mos100.com
+  - IP-CIDR,112.121.42.168/32,no-resolve
   - IP-CIDR,112.78.27.54/32,no-resolve
   - IP-CIDR,123.108.119.105/32,no-resolve
   - IP-CIDR,123.108.119.106/32,no-resolve
