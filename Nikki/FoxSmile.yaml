@@ -164,6 +164,7 @@ rules:
   - RULE-SET,MyDIRECT_class,🎯 直连
   - RULE-SET,proxylite_class,🚀 默认代理
   - RULE-SET,MyProxy_class,🚀 默认代理
+  - RULE-SET,tmdb_domain,🚀 默认代理
   - RULE-SET,Bet_class,⚽️ Bet
   - RULE-SET,openai_domain,🤖 openai
   - RULE-SET,gemini_domain,🤖 gemini
@@ -241,6 +242,7 @@ rule-providers:
   proxylite_class: { <<: *class_text, url: "https://gh-proxy.com/raw.githubusercontent.com/qichiyuhub/rule/refs/heads/main/proxy.list"}
   Bet_class: { <<: *class_yaml, url: "https://gh-proxy.com/raw.githubusercontent.com/NewHugo/OpenWrt/refs/heads/main/Openclash/Ruleset/Bet.yaml"}
   MyProxy_class: { <<: *class_yaml, url: "https://gh-proxy.com/raw.githubusercontent.com/NewHugo/OpenWrt/refs/heads/main/Openclash/Ruleset/MyProxy.yaml"}
+  tmdb_domain: {  <<: *domain_mrs, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/tmdb.mrs" }
   openai_domain: {  <<: *domain_mrs, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/openai.mrs" }
   gemini_domain: {  <<: *domain_mrs, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google-gemini.mrs" }
   ai_domain: {  <<: *domain_mrs, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ai-!cn.mrs" }
