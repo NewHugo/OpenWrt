@@ -105,7 +105,7 @@ dns:
     - "*.bbylcm01.vip"
     - "*.yiyou1.com"
   default-nameserver:
-    - https://dns.alidns.com/dns-query
+    - 223.5.5.5
   proxy-server-nameserver:
     - https://dns.alidns.com/dns-query
   # namesever尽量用运营商提供的DNS
@@ -217,6 +217,7 @@ rules:
   - RULE-SET,paypal_domain,💶 PayPal
   - RULE-SET,OKX_domain,🪙 数字货币
   - RULE-SET,Binance_domain,🪙 数字货币
+  - RULE-SET,crypto_class,🪙 数字货币
   - RULE-SET,speedtest_domain,✈️ Speedtest测速
   - RULE-SET,telegram_domain,📲 Telegram
   - RULE-SET,telegram_ip,📲 Telegram,no-resolve
@@ -293,6 +294,7 @@ rule-providers:
   paypal_domain: { <<: *domain_mrs, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/paypal.mrs"}
   OKX_domain: { <<: *domain_mrs, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/okx.mrs"}
   Binance_domain: { <<: *domain_mrs, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/binance.mrs"}
+  crypto_class: { <<: *class_text, url: "https://gh-proxy.com/raw.githubusercontent.com/NewHugo/OpenWrt/refs/heads/main/Openclash/Ruleset/crypto.list"}
   speedtest_domain: { <<: *domain_mrs, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/ookla-speedtest.mrs"}
   telegram_domain: { <<: *domain_mrs, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/telegram.mrs"}
   whatsapp_domain: { <<: *domain_mrs, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/whatsapp.mrs"}
